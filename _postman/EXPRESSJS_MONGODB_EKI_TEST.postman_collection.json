@@ -1,0 +1,326 @@
+{
+	"info": {
+		"_postman_id": "d0b24c3d-a240-4b45-bc9c-63b69885fb4d",
+		"name": "EXPRESSJS_MONGODB_EKI_TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET / ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8080",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST PASIEN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"nama_pasien\": \"pasien3\",\r\n    \"usia\" : \"usia1\",\r\n    \"alamat\": \"alamat1\",\r\n    \"provinsi\": \"provinsi1\",\r\n    \"kotakab\": \"kotakab1\",\r\n    \"kecamatan\": \"kecamatan1\",\r\n    \"bpjs\": true,\r\n    \"poli\": \"gigi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pasien",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PASIEN ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pasien",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PASIEN skip limit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pasien?skip=2&limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "2"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PASIEN NAME skip limit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pasien/name/1?skip=1&limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien",
+						"name",
+						"1"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PASIEN BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pasien/608c130e9a087e38b4dd2cb6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien",
+						"608c130e9a087e38b4dd2cb6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT PASIEN BY ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \"nama_pasien\": \"pasien100\",\r\n    \"usia\" : \"usia100\",\r\n    \"alamat\": \"alamat100\",\r\n    \"provinsi\": \"provinsi100\",\r\n    \"kotakab\": \"kotakab100\",\r\n    \"kecamatan\": \"kecamatan100\",\r\n    \"bpjs\": false,\r\n    \"poli\": \"gigi100\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pasien/608c13f89a087e38b4dd2cb7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien",
+						"608c13f89a087e38b4dd2cb7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE PASIEN BY ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pasien/608c130e9a087e38b4dd2cb6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien",
+						"608c130e9a087e38b4dd2cb6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE PASIEN ALL",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pasien",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pasien"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ANTRIAN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/antrian",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"antrian"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST ANTRIAN INCREMENT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/antrian",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"antrian"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE ANTRIAN ALL",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/antrian",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"antrian"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
