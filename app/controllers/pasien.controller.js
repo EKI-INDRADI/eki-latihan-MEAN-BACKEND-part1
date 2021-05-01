@@ -78,7 +78,7 @@ exports.findAll = (req, res) => {
     var skipping = parseInt(req.query.skip) || 0;
     var limiting = parseInt(req.query.limit) || 0;
 
-    EKI_PASIEN.find(condition).skip(skipping).limit(limiting).exec()
+    EKI_PASIEN.find(condition).sort({createdAt:-1}).skip(skipping).limit(limiting).exec()
         .then(data => {
             res.send(data);
         })
@@ -100,7 +100,7 @@ exports.findName = (req, res) => {
     var skipping = parseInt(req.query.skip) || 0;
     var limiting = parseInt(req.query.limit) || 0;
 
-    EKI_PASIEN.find({ "nama_pasien": new RegExp(like_nama_pasien) }).skip(skipping).limit(limiting).exec()
+    EKI_PASIEN.find({ "nama_pasien": new RegExp(like_nama_pasien) }).sort({createdAt:-1}).skip(skipping).limit(limiting).exec()
         .then(data => {
             res.send(data);
         })
